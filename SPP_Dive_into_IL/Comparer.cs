@@ -9,7 +9,13 @@ namespace SPP_Dive_into_IL
     {        
         public int Compare(int x, int y)
         {
-            throw new NotImplementedException();
+            if (x > y)
+                return 1;
+            else
+                if (x < y)
+                    return -1;
+                else
+                    return 0;            
         }
     }
 }
