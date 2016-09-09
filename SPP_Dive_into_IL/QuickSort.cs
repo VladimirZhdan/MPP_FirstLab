@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SPP_Dive_into_IL
 {
-    class Worker 
+    public class QuickSort 
     {
-        int[] GenerateRandomMass(int len)
+        public int[] GenerateRandomMass(int len)
         {
             Random rnd = new Random();
 
@@ -18,6 +18,8 @@ namespace SPP_Dive_into_IL
             }
 
             return result;
+
+
         }
     }
 }
