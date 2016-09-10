@@ -18,14 +18,14 @@ namespace SPP_Dive_into_IL.Tests
         [TestMethod]
         public void CheckLengthOfInitMass()
         {
-            int[] result = sut.GenerateRandomMass(10);
+            int[] result = MassWorker.GenerateRandomMass(10);
             Assert.AreEqual(10, result.Length);
         }
 
         [TestMethod]
         public void CheckRightSortMass()
         {
-            int[] mass = sut.GenerateRandomMass(100);
+            int[] mass = MassWorker.GenerateRandomMass(100);
             sut.SortMass(mass);
 
             bool result = true;

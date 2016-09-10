@@ -9,19 +9,6 @@ namespace SPP_Dive_into_IL
     {
         private Comparer cmp = new Comparer();
 
-        public int[] GenerateRandomMass(int len)
-        {
-            Random rnd = new Random();
-
-            int[] result = new int[len];            
-            for(int i = 0; i < len; i++)
-            {
-                result[i] = rnd.Next(-100, 100);
-            }
-
-            return result;
-        }
-
         public void SortMass(int[] mass)
         {
             Sort(mass, 0, mass.Length - 1);            

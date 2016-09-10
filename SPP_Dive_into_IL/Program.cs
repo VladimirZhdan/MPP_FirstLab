@@ -18,18 +18,20 @@ namespace SPP_Dive_into_IL
                 int count;
                 if (int.TryParse(args[0], out count))
                 {
-                    if(count > 0)
+                    if (count > 0)
                     {
                         QuickSort sort = new QuickSort();
-                        int[] mass = sort.GenerateRandomMass(count);
+                        int[] mass = MassWorker.GenerateRandomMass(count);                        
                         sort.SortMass(mass);
                         MassWorker.OutputMass(mass);
                     }
                     else
                     {
-                        Console.WriteLine("Ошибка! Параметр должен быть положительным.");
+                        Console.WriteLine("Ошибка! Параметр должен быть положительным числом.");
                     }
                 }
+                else
+                    Console.WriteLine("Ошибка! Параметр должен быть положительным числом.");
             }
         }
     }

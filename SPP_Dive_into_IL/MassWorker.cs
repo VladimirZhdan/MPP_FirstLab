@@ -14,6 +14,19 @@ namespace SPP_Dive_into_IL
             {
                 Console.WriteLine(mass[i]);
             }
-        }        
+        }
+
+        public static int[] GenerateRandomMass(int len)
+        {
+            Random rnd = new Random();
+
+            int[] result = new int[len];
+            for (int i = 0; i < len; i++)
+            {
+                result[i] = rnd.Next(-100, 100);
+            }
+
+            return result;
+        }
     }
 }
