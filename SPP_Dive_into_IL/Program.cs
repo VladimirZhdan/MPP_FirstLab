@@ -11,7 +11,7 @@ namespace SPP_Dive_into_IL
         {
             if(args.Length < 1)
             {
-                Console.WriteLine("Ошибка! Недостаточное количество параметров");
+                OutputErrorMessage("Недостаточное количество параметров");
             }
             else
             {
@@ -27,12 +27,17 @@ namespace SPP_Dive_into_IL
                     }
                     else
                     {
-                        Console.WriteLine("Ошибка! Параметр должен быть положительным числом.");
+                        OutputErrorMessage("Параметр должен быть положительным числом.");
                     }
                 }
                 else
-                    Console.WriteLine("Ошибка! Параметр должен быть положительным числом.");
+                    OutputErrorMessage("Параметр должен быть положительным числом.");
             }
+        }
+
+        private static void OutputErrorMessage(string str)
+        {
+            Console.WriteLine("Error! " + str);
         }
     }
 }
