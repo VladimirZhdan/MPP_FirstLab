@@ -20,7 +20,10 @@ namespace SPP_Dive_into_IL
                 {
                     if(count > 0)
                     {
-                        
+                        QuickSort sort = new QuickSort();
+                        int[] mass = sort.GenerateRandomMass(count);
+                        sort.SortMass(mass);
+                        MassWorker.OutputMass(mass);
                     }
                     else
                     {

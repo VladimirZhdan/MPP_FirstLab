@@ -16,7 +16,7 @@ namespace SPP_Dive_into_IL
             int[] result = new int[len];            
             for(int i = 0; i < len; i++)
             {
-                result[i] = rnd.Next();
+                result[i] = rnd.Next(-100, 100);
             }
 
             return result;
