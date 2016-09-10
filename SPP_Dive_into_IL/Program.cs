@@ -9,7 +9,25 @@ namespace SPP_Dive_into_IL
     {
         static void Main(string[] args)
         {
-            
+            if(args.Length < 1)
+            {
+                Console.WriteLine("Ошибка! Недостаточное количество параметров");
+            }
+            else
+            {
+                int count;
+                if (int.TryParse(args[0], out count))
+                {
+                    if(count > 0)
+                    {
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка! Параметр должен быть положительным.");
+                    }
+                }
+            }
         }
     }
 }
