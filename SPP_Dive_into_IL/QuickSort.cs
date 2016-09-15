@@ -11,7 +11,10 @@ namespace SPP_Dive_into_IL
 
         public void SortMass(int[] mass)
         {
-            Sort(mass, 0, mass.Length - 1);            
+            if (mass != null)
+                Sort(mass, 0, mass.Length - 1);
+            else
+                return;
         }
 
         private int Partition(int[] array, int start, int end)
@@ -31,14 +34,14 @@ namespace SPP_Dive_into_IL
         }
 
         private void Sort(int[] array, int start, int end)
-        {
-            if (start >= end)
-            {
-                return;
-            }
-            int pivot = Partition(array, start, end);
-            Sort(array, start, pivot - 1);
-            Sort(array, pivot + 1, end);
+        {                     
+                if (start >= end)
+                {
+                    return;
+                }
+                int pivot = Partition(array, start, end);
+                Sort(array, start, pivot - 1);
+                Sort(array, pivot + 1, end);         
         }
     }
 }

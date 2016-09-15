@@ -37,5 +37,13 @@ namespace SPP_Dive_into_IL.Tests
 
             Assert.AreEqual(true, result);
         }
+
+        [TestMethod]
+        public void ControlOfNullReturn()
+        {
+            Assert.AreEqual(null, MassWorker.GenerateRandomMass(-1));            
+        }
+
+
     }
 }
