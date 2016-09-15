@@ -19,10 +19,9 @@ namespace SPP_Dive_into_IL
                 if (int.TryParse(args[0], out count))
                 {
                     if (count > 0)
-                    {
-                        QuickSort sort = new QuickSort();
-                        int[] mass = MassWorker.GenerateRandomMass(count);                        
-                        sort.SortMass(mass);
+                    {                        
+                        int[] mass = MassWorker.GenerateRandomMass(count);                                                
+                        QuickSort.SortMass(mass);
                         MassWorker.OutputMass(mass);
                     }
                     else

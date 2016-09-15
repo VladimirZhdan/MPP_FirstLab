@@ -7,9 +7,9 @@ namespace SPP_Dive_into_IL
 {
     public class QuickSort 
     {
-        private Comparer cmp = new Comparer();
+        private static Comparer cmp = new Comparer();
 
-        public void SortMass(int[] mass)
+        public static void SortMass(int[] mass)
         {
             if (mass != null)
                 Sort(mass, 0, mass.Length - 1);
@@ -17,7 +17,7 @@ namespace SPP_Dive_into_IL
                 return;
         }
 
-        private int Partition(int[] array, int start, int end)
+        private static int Partition(int[] array, int start, int end)
         {                    
             int marker = start;
             for (int i = start; i <= end; i++)
@@ -33,7 +33,7 @@ namespace SPP_Dive_into_IL
             return marker - 1;
         }
 
-        private void Sort(int[] array, int start, int end)
+        private static void Sort(int[] array, int start, int end)
         {                     
                 if (start >= end)
                 {

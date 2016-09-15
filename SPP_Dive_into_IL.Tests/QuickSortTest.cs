@@ -7,14 +7,6 @@ namespace SPP_Dive_into_IL.Tests
     [TestClass]
     public class QuickSortTest
     {
-        QuickSort sut;
-
-        [TestInitialize]
-        public void TestSetUp()
-        {
-            sut = new QuickSort();
-        }
-
         [TestMethod]
         public void CheckLengthOfInitMass()
         {
@@ -26,7 +18,7 @@ namespace SPP_Dive_into_IL.Tests
         public void CheckRightSortMass()
         {
             int[] mass = MassWorker.GenerateRandomMass(100);
-            sut.SortMass(mass);
+            QuickSort.SortMass(mass);
 
             bool result = true;
             for(int i = 0; (i < mass.Length - 1) && (result); i++)
